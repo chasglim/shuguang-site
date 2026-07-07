@@ -1,6 +1,5 @@
 ---
 import { SITE_TITLE } from '../consts';
-import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="site-header">
@@ -8,16 +7,6 @@ import HeaderLink from './HeaderLink.astro';
 		<a class="brand" href="/" aria-label={SITE_TITLE}>
 			<span class="brand-mark">SZ</span>
 			<span class="brand-text">张曙光</span>
-		</a>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/projects">Projects</HeaderLink>
-			<HeaderLink href="/writing">Writing</HeaderLink>
-			<HeaderLink href="/research">Research</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
-		<a class="repo-link" href="https://github.com/chasglim/shuguang-site" target="_blank" rel="noreferrer">
-			GitHub
 		</a>
 	</nav>
 </header>
@@ -60,51 +49,15 @@ import HeaderLink from './HeaderLink.astro';
 		gap: 1rem;
 		width: min(1120px, calc(100% - 2rem));
 		margin: 0 auto;
-		padding: 0.85rem 0;
-	}
-	.internal-links {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.2rem;
+		padding: 1rem 0;
 	}
 	nav a {
 		color: var(--muted);
 		text-decoration: none;
 	}
-	.internal-links a {
-		border-radius: 999px;
-		padding: 0.45rem 0.72rem;
-		font-size: 0.92rem;
-	}
-	.internal-links a:hover,
-	.internal-links a.active {
-		background: var(--surface);
-		color: var(--ink);
-	}
-	.repo-link {
-		border: 1px solid var(--line-strong);
-		border-radius: 999px;
-		padding: 0.42rem 0.75rem;
-		font-size: 0.88rem;
-		color: var(--ink);
-		background: var(--surface);
-	}
-	.repo-link:hover {
-		border-color: var(--accent);
-		color: var(--accent);
-	}
 	@media (max-width: 780px) {
 		nav {
-			align-items: flex-start;
-			flex-direction: column;
-		}
-		.internal-links {
-			flex-wrap: wrap;
-			justify-content: flex-start;
-		}
-		.repo-link {
-			display: none;
+			padding: 0.85rem 0;
 		}
 	}
 </style>

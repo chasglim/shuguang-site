@@ -1,21 +1,6 @@
 # Shuguang Zhang Personal Site
 
-Personal research homepage for AI security, cryptographic engineering, privacy-preserving computation, and agent governance in financial infrastructure.
-
-## Structure
-
-```text
-/
-  Home
-/projects
-  Open-source projects and research prototypes
-/writing
-  Long-form essays
-/research
-  Research areas and collaboration topics
-/about
-  Background, collaboration, and disclaimer
-```
+Minimal personal introduction site.
 
 ## Development
 

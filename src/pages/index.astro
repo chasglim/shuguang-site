@@ -1,125 +1,21 @@
 ---
 import Page from '../layouts/Page.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-
-const focusAreas = [
-	{
-		title: 'Cryptography Engineering',
-		body: '后量子密码、同态加密、HSS、零知识证明与密码资产治理，关注算法进入真实系统后的边界和迁移成本。',
-	},
-	{
-		title: 'AI Agent Security',
-		body: '智能体记忆治理、多租户隔离、工具调用安全、动作审计，以及企业 Agent 的长期安全边界。',
-	},
-	{
-		title: 'Secure RAG',
-		body: '金融知识库安全、最小暴露检索、权限约束、可审计生成，以及面向敏感数据的检索增强系统。',
-	},
-	{
-		title: 'Research Systems',
-		body: '把论文想法做成可运行系统，连接学术问题、工程原型和金融基础设施中的真实约束。',
-	},
-];
-
-const projects = [
-	{
-		title: 'SecureAIPilot',
-		body: 'A security-oriented agent framework for cryptographic asset discovery and AI governance.',
-	},
-	{
-		title: 'CryptoPilot',
-		body: 'A research prototype for AI-assisted cryptographic engineering and post-quantum migration.',
-	},
-	{
-		title: 'Memory Governance',
-		body: 'A governed memory substrate for enterprise agents, with admission control and action-aware audit trails.',
-	},
-];
 ---
 
 <Page title={SITE_TITLE} description={SITE_DESCRIPTION}>
-	<section class="home-hero">
-		<img
-			class="hero-art"
-			src="/security-map.svg"
-			alt="A system map connecting cryptography, agent memory, secure RAG, and financial AI infrastructure."
-		/>
-		<div class="hero-content">
-			<p class="eyebrow">Financial AI Security / Cryptography Engineering / Agent Governance</p>
-			<h1>张曙光 / Shuguang Zhang</h1>
-			<p class="hero-lede">Building secure AI systems for financial infrastructure.</p>
-			<p class="hero-copy">
-				我关注金融基础设施中的 AI 安全、密码工程、隐私计算与智能体治理。这里记录我的开源项目、研究笔记、论文思考和工程实践。
-			</p>
-			<div class="hero-actions">
-				<a class="button-primary" href="/projects">Projects</a>
-				<a class="button-secondary" href="/research">Research</a>
-				<a class="button-secondary" href="/writing">Writing</a>
-			</div>
-		</div>
-	</section>
-
-	<section class="section" aria-labelledby="focus-title">
-		<div class="section-header">
-			<div>
-				<p class="eyebrow">Focus</p>
-				<h2 id="focus-title">Research and engineering directions</h2>
-			</div>
+	<section class="profile">
+		<p class="eyebrow">Personal Introduction</p>
+		<h1>张曙光 / Shuguang Zhang</h1>
+		<p class="lede">金融 AI 安全 / 隐私计算 / 后量子密码 / Agent Memory Governance</p>
+		<div class="profile-body">
 			<p>
-				The site is organized around a single question: how to make AI systems safer when they touch financial infrastructure, cryptographic assets, and enterprise memory.
+				I build secure AI systems at the intersection of cryptography, financial infrastructure, and agent governance.
 			</p>
-		</div>
-		<div class="card-grid">
-			{
-				focusAreas.map((area) => (
-					<article class="feature-card">
-						<h3>{area.title}</h3>
-						<p>{area.body}</p>
-					</article>
-				))
-			}
-		</div>
-	</section>
-
-	<section class="section" aria-labelledby="project-title">
-		<div class="section-header">
-			<div>
-				<p class="eyebrow">Featured Projects</p>
-				<h2 id="project-title">Research prototypes with an engineering spine</h2>
-			</div>
-			<a href="/projects">View all projects</a>
-		</div>
-		<div class="three-column-grid">
-			{
-				projects.map((project) => (
-					<article class="project-card">
-						<div>
-							<h3>{project.title}</h3>
-							<p>{project.body}</p>
-						</div>
-						<div class="project-meta">
-							<span>Research prototype</span>
-							<span>Security</span>
-						</div>
-					</article>
-				))
-			}
-		</div>
-	</section>
-
-	<section class="section split" aria-labelledby="collaboration-title">
-		<div>
-			<p class="eyebrow">Collaboration</p>
-			<h2 id="collaboration-title">For research, systems, and applied security work</h2>
-		</div>
-		<div class="statement">
 			<p>
-				欢迎围绕金融 AI 安全、Agent 安全、后量子密码迁移、Secure RAG、隐私计算系统开展研究合作。我的偏好是把问题定义清楚，把系统跑起来，再把可复用的经验写下来。
+				我关注金融基础设施中的 AI 安全、密码工程、隐私计算与智能体治理，尤其是能够落到系统、工具和可审计流程里的研究问题。
 			</p>
-			<div class="button-row">
-				<a class="button-secondary" href="/research">Research areas</a>
-				<a class="button-secondary" href="/about">About and disclaimer</a>
-			</div>
+			<p class="disclaimer">本文和本站内容仅代表个人研究与技术观点，不代表所在单位立场。</p>
 		</div>
 	</section>
 </Page>
