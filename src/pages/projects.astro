@@ -1,0 +1,100 @@
+---
+import Page from '../layouts/Page.astro';
+
+const openSourceProjects = [
+	{
+		title: 'SecureAIPilot',
+		body: 'A security-oriented agent framework for cryptographic asset discovery and AI governance.',
+		stack: ['Agent security', 'Audit', 'Crypto assets'],
+		status: 'Public concept / active design',
+	},
+	{
+		title: 'CryptoPilot',
+		body: 'A research prototype for AI-assisted cryptographic engineering and post-quantum migration.',
+		stack: ['PQC', 'Crypto inventory', 'Migration'],
+		status: 'Research prototype',
+	},
+	{
+		title: 'PaperPilot / ResearchPilot',
+		body: 'A local-first research workflow cockpit for papers, notes, submissions, and experiments.',
+		stack: ['Research workflow', 'Local-first', 'Notes'],
+		status: 'Prototype direction',
+	},
+];
+
+const researchPrototypes = [
+	'Harness Memory Governance: governed memory substrate for enterprise agents.',
+	'Secure RAG Experiments: encrypted reranking, least-privilege retrieval, and auditable generation.',
+	'PQC Migration Scanner: discovering cryptographic assets and planning migration paths.',
+];
+---
+
+<Page
+	title="Projects"
+	description="Open-source projects and research prototypes around secure AI systems, cryptographic engineering, and agent governance."
+>
+	<section class="intro">
+		<p class="eyebrow">Projects</p>
+		<h1>Open-source work and research prototypes</h1>
+		<p>
+			项目区不是简单的 GitHub 链接列表，而是把可公开的系统想法整理成研究型项目：问题、边界、技术栈、当前状态和后续可合作方向。
+		</p>
+	</section>
+
+	<section class="section" aria-labelledby="open-source-title">
+		<div class="section-header">
+			<div>
+				<p class="eyebrow">Open-source Projects</p>
+				<h2 id="open-source-title">Public concepts with running-code ambition</h2>
+			</div>
+		</div>
+		<div class="three-column-grid">
+			{
+				openSourceProjects.map((project) => (
+					<article class="project-card">
+						<div>
+							<h3>{project.title}</h3>
+							<p>{project.body}</p>
+							<div class="tag-row">
+								{project.stack.map((tag) => (
+									<span class="tag">{tag}</span>
+								))}
+							</div>
+						</div>
+						<div class="project-meta">
+							<span>{project.status}</span>
+						</div>
+					</article>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="section split" aria-labelledby="prototype-title">
+		<div>
+			<p class="eyebrow">Research Prototypes</p>
+			<h2 id="prototype-title">Ideas that can become papers, tools, or experiments</h2>
+		</div>
+		<div class="writing-list">
+			{
+				researchPrototypes.map((item) => (
+					<article class="card">
+						<p>{item}</p>
+					</article>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="section split" aria-labelledby="crypto-title">
+		<div>
+			<p class="eyebrow">Crypto Implementations</p>
+			<h2 id="crypto-title">Where the identity becomes legible</h2>
+		</div>
+		<div class="statement">
+			<p>
+				后续可以单独放 Rust FHE / HSS Playground、Private Inference Kernels、Encrypted Top-K、PQC 参数实验等实现型内容。单位内部不可公开的系统只保留为 research prototype 或 concept note，不暴露真实系统名和业务细节。
+			</p>
+		</div>
+	</section>
+</Page>

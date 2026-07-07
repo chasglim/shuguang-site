@@ -1,0 +1,89 @@
+---
+import Page from '../layouts/Page.astro';
+
+const areas = [
+	{
+		title: 'Privacy-Preserving AI Systems',
+		body: 'Private inference, encrypted retrieval, secure ranking, secure RAG, and the system costs of protecting sensitive financial data.',
+	},
+	{
+		title: 'Agent Memory Governance',
+		body: 'Long-term memory safety, multi-tenant isolation, action-aware admission, memory lifecycle policy, and auditability.',
+	},
+	{
+		title: 'Cryptographic Engineering',
+		body: 'Post-quantum migration, cryptographic asset discovery, FHE/HSS systems, and applied protocol implementation practice.',
+	},
+	{
+		title: 'Financial AI Security',
+		body: 'Risk-aware RAG, least-privilege AI workflows, verifiable logs, and operational controls for enterprise AI systems.',
+	},
+];
+
+const topics = [
+	'How should enterprise agents decide what is safe to remember?',
+	'What does least-privilege retrieval mean for financial RAG?',
+	'How can organizations discover cryptographic assets before PQC migration?',
+	'Where do private inference systems fail in real deployment paths?',
+];
+---
+
+<Page
+	title="Research"
+	description="Research areas, collaborative topics, and paper directions around financial AI security, cryptographic engineering, and agent memory governance."
+>
+	<section class="intro">
+		<p class="eyebrow">Research</p>
+		<h1>Research areas with systems behind them</h1>
+		<p>
+			这个页面用来连接学术问题和真实场景。重点不是堆论文列表，而是把研究方向、代表系统、可合作题目讲清楚。
+		</p>
+	</section>
+
+	<section class="section" aria-labelledby="area-title">
+		<div class="section-header">
+			<div>
+				<p class="eyebrow">Research Areas</p>
+				<h2 id="area-title">Four directions</h2>
+			</div>
+		</div>
+		<div class="research-list">
+			{
+				areas.map((area) => (
+					<article class="research-item">
+						<h3>{area.title}</h3>
+						<p>{area.body}</p>
+					</article>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="section split" aria-labelledby="topic-title">
+		<div>
+			<p class="eyebrow">Collaborative Topics</p>
+			<h2 id="topic-title">Questions worth turning into papers or prototypes</h2>
+		</div>
+		<div class="writing-list">
+			{
+				topics.map((topic) => (
+					<article class="card">
+						<p>{topic}</p>
+					</article>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="section split" aria-labelledby="output-title">
+		<div>
+			<p class="eyebrow">Outputs</p>
+			<h2 id="output-title">What will live here over time</h2>
+		</div>
+		<div class="statement">
+			<p>
+				Selected Papers, Preprints, Manuscripts, Review Notes, and Collaborative Topics will be added as they become ready for public release.
+			</p>
+		</div>
+	</section>
+</Page>
